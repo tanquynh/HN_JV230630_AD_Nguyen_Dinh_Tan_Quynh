@@ -59,7 +59,7 @@ public class MusicManagement {
             System.out.println("1. Nhập số lượng ca sĩ cần thêm và nhập thông tin cần thêm mới");
             System.out.println("2. Hiển thị danh sách tất cả ca sĩ đã lưu trữ");
             System.out.println("3. Thay đổi thông tin ca sĩ theo mã id");
-            System.out.println("4. Xóa ca sĩ theo mã id"); // kiểm tra xem nếu sinh viên có điểm thi thì không xóa được
+            System.out.println("4. Xóa ca sĩ theo mã id"); 
             System.out.println("6. Thoát");
             choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
@@ -68,18 +68,18 @@ public class MusicManagement {
                    addSinger(sc, currentSinger);
                     break;
                 case 2:
-//                    Hiển thị danh sách học sinh đã lưu trữ
+//                    Hiển thị danh sách ca si đã lưu trữ
                  getStudent(currentSinger);
                     break;
                 case 3:
-//                    Thay đổi tên học sinh theo mã id
-                    System.out.println("Nhập vào id học sinh muốn sửa tên");
+//                    Thay đổi tên ca si theo mã id
+                    System.out.println("Nhập vào id ca si muốn sửa tên");
                     int singerId = Integer.parseInt(sc.nextLine());
                     updateSinger(singerId, currentSinger, sc);
                     break;
                 case 4:
 //                    Xóa học sinh theo mã id
-                    System.out.println("Nhập vào id học sinh muốn sửa tên");
+                    System.out.println("Nhập vào id ca si muốn sửa tên");
                     singerId = Integer.parseInt(sc.nextLine());
                     deleteSinger(singerId, currentSinger);
                     break;
@@ -102,7 +102,7 @@ public class MusicManagement {
             System.out.println("1. Nhập số lượng bài hát cần thêm và nhập thông tin cần thêm mới");
             System.out.println("2. Hiển thị danh sách tất cả bài hát đã lưu trữ");
             System.out.println("3. Thay đổi tên thng tin bài hát theo mã id");
-            System.out.println("4. Xóa bài hát theo mã id"); // kiểm tra xem nếu môn học có điểm thi thì không xóa được
+            System.out.println("4. Xóa bài hát theo mã id"); 
             System.out.println("5. Thoát");
             choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
@@ -116,13 +116,13 @@ public class MusicManagement {
                     break;
                 case 3:
 //                    Thay đổi tên môn học theo mã id
-                    System.out.println("Nhập vào id môn học muốn sửa tên");
+                    System.out.println("Nhập vào id ca sic muốn sửa tên");
                     int subjectId = Integer.parseInt(sc.nextLine());
                     subjectService.updateSubject(subjectId, currentStudentIndex, sc);
                     break;
                 case 4:
 //                    Xóa môn học theo mã id
-                    System.out.println("Nhập vào id môn học muốn xóa");
+                    System.out.println("Nhập vào id ca si c muốn xóa");
                     subjectId = Integer.parseInt(sc.nextLine());
                     subjectService.deleteSubject(subjectId, currentSubjectIndex);
                     break;
